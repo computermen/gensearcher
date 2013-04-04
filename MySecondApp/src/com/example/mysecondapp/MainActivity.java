@@ -28,7 +28,7 @@ public class MainActivity extends Activity {
         getMenuInflater().inflate(R.menu.main, menu);
         return true;
     }
-    
+    // Hard coded strings need fixing
     public void onButton1Click(View view) {
     	StringBuilder str = new StringBuilder("");
     	if (pepBox.isChecked()) {
