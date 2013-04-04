@@ -6,10 +6,13 @@ import android.view.Menu;
 import android.view.View;
 import android.widget.CheckBox;
 import android.widget.TextView;
+import android.webkit.WebView;
+
 
 public class MainActivity extends Activity {
 	TextView textView;
 	CheckBox pepBox, cheeseBox;
+	WebView webView;
 	
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -19,6 +22,7 @@ public class MainActivity extends Activity {
         pepBox = (CheckBox) findViewById(R.id.checkBox1);
         cheeseBox = (CheckBox) findViewById(R.id.checkBox2);
         textView = (TextView) findViewById(R.id.textView2);
+        webView = (WebView) findViewById(R.id.webView1);
     }
 
 
@@ -41,5 +45,6 @@ public class MainActivity extends Activity {
     		str.append("Plain");
     	}
     	textView.setText(str);
+    	webView.loadUrl ("http://www.google.com/search?q=" + str.toString());
     }
 }
