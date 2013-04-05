@@ -39,7 +39,7 @@ public class MainActivity extends Activity {
     		str.append("Pepperoni");
     	}
     	if (cheeseBox.isChecked()) {
-    		str.append("\"Extra cheese\" ");
+    		str.append("\"Extra cheese\"");
     	}
     	if (str.length() == 23) {
     		str.insert(9, '+');
