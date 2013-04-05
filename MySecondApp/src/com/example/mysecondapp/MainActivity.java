@@ -36,10 +36,13 @@ public class MainActivity extends Activity {
     public void onButton1Click(View view) {
     	StringBuilder str = new StringBuilder("");
     	if (pepBox.isChecked()) {
-    		str.append("Pepperoni" + " ");
+    		str.append("Pepperoni");
     	}
     	if (cheeseBox.isChecked()) {
-    		str.append("Extra cheese");
+    		str.append("\"Extra cheese\" ");
+    	}
+    	if (str.length() == 23) {
+    		str.insert(9, '+');
     	}
     	if (str.length() == 0 ) {
     		str.append("Plain");
