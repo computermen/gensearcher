@@ -7,11 +7,13 @@ import android.view.View;
 import android.widget.CheckBox;
 import android.widget.TextView;
 import android.webkit.WebView;
-
+import android.widget.EditText;
 
 public class MainActivity extends Activity {
+private static final String EditText = null;
 	TextView textView;
-	CheckBox pepBox, cheeseBox;
+	EditText firstnameeditText, surnameeditText;
+	// CheckBox pepBox, cheeseBox;
 	WebView webView;
 	
     @Override
@@ -19,9 +21,11 @@ public class MainActivity extends Activity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         
-        pepBox = (CheckBox) findViewById(R.id.checkBox1);
-        cheeseBox = (CheckBox) findViewById(R.id.checkBox2);
+        // pepBox = (CheckBox) findViewById(R.id.checkBox1);
+        // cheeseBox = (CheckBox) findViewById(R.id.checkBox2);
         textView = (TextView) findViewById(R.id.textView2);
+        firstnameeditText = (EditText) findViewById(R.id.editText1);
+        surnameeditText = (EditText) findViewById(R.id.editText2);
         webView = (WebView) findViewById(R.id.webView1);
     }
 
@@ -35,18 +39,21 @@ public class MainActivity extends Activity {
     // Hard coded strings need fixing
     public void onButton1Click(View view) {
     	StringBuilder str = new StringBuilder("");
-    	if (pepBox.isChecked()) {
-    		str.append("Pepperoni");
-    	}
-    	if (cheeseBox.isChecked()) {
-    		str.append("\"Extra cheese\"");
-    	}
-    	if (str.length() == 23) {
-    		str.insert(9, '+');
-    	}
-    	if (str.length() == 0 ) {
-    		str.append("Plain");
-    	}
+    	// if (pepBox.isChecked()) {
+    	//	str.append("Pepperoni");
+    	//}
+    	//if (cheeseBox.isChecked()) {
+    	//	str.append("\"Extra cheese\"");
+    	//}
+    	//if (str.length() == 23) {
+    	//	str.insert(9, '+');
+    	//}
+    	//if (str.length() == 0 ) {
+    	//	str.append("Plain");
+    	//}
+    	str.append(firstnameeditText.getText());
+    	str.append(" ");
+    	str.append(surnameeditText.getText());
     	textView.setText(str);
     	webView.loadUrl ("http://www.google.com/search?q=" + str.toString());
     }
