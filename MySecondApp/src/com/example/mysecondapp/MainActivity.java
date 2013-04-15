@@ -51,9 +51,11 @@ private static final String EditText = null;
     	//if (str.length() == 0 ) {
     	//	str.append("Plain");
     	//}
+    	str.append("\"");
     	str.append(firstnameeditText.getText());
     	str.append(" ");
     	str.append(surnameeditText.getText());
+    	str.append("\"");
     	textView.setText(str);
     	webView.loadUrl ("http://www.google.com/search?q=" + str.toString());
     }
