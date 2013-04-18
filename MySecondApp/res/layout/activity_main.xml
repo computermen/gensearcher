@@ -21,19 +21,21 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:ems="10"
+        android:hint="Firstname(s)"
         android:inputType="textPersonName" >
 
         <requestFocus />
     </EditText>
     
      <EditText
-        android:id="@+id/editText2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignLeft="@+id/button1"
-        android:layout_below="@+id/editText1"
-        android:ems="10"
-        android:inputType="textPersonName" />
+         android:id="@+id/editText2"
+         android:layout_width="wrap_content"
+         android:layout_height="wrap_content"
+         android:layout_alignLeft="@+id/button1"
+         android:layout_below="@+id/editText1"
+         android:ems="10"
+         android:hint="Family Name"
+         android:inputType="textPersonName" />
 
     <TextView
         android:id="@+id/textView2"
@@ -42,7 +44,7 @@
         android:layout_alignLeft="@+id/button1"
         android:layout_below="@+id/button1"
         android:layout_marginTop="71dp"
-        android:text="TextView" />
+        android:text="Search String" />
 
     <Button
         android:id="@+id/button1"
