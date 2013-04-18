@@ -8,6 +8,7 @@ import android.widget.CheckBox;
 import android.widget.TextView;
 import android.webkit.WebView;
 import android.widget.EditText;
+import nz.co.computermen.gensearcher.R;
 
 public class MainActivity extends Activity {
 // private static final String EditText = null;
