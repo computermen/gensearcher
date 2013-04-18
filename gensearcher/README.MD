@@ -1,0 +1,1 @@
+This Android project "gensearcher" is simple string constructor / searcher for finding people on the Net. 
