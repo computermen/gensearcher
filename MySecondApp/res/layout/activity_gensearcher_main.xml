@@ -7,37 +7,37 @@
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
-    tools:context=".MainActivity" >
+    tools:context=".GenSearcherMainActivity" >
 
     <WebView
         android:id="@+id/webView1"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_alignLeft="@+id/textView2"
-        android:layout_below="@+id/textView2"
+        android:layout_alignLeft="@+id/searchstringtextView"
+        android:layout_below="@+id/searchstringtextView"
         android:layout_marginTop="62dp" />
 
     <TextView
-        android:id="@+id/textView2"
+        android:id="@+id/searchstringtextView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignLeft="@+id/button1"
-        android:layout_below="@+id/button1"
+        android:layout_alignLeft="@+id/searchbutton"
+        android:layout_below="@+id/searchbutton"
         android:layout_marginTop="28dp"
         android:text="Search String" />
 
     <EditText
-        android:id="@+id/editText2"
+        android:id="@+id/surnameeditText"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignLeft="@+id/editText1"
-        android:layout_below="@+id/editText1"
+        android:layout_alignLeft="@+id/firstnameeditText"
+        android:layout_below="@+id/firstnameeditText"
         android:ems="10"
         android:hint="Family Name"
         android:inputType="textPersonName" />
 
     <EditText
-        android:id="@+id/editText1"
+        android:id="@+id/firstnameeditText"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentLeft="true"
@@ -47,60 +47,59 @@
         android:inputType="textPersonName" />
 
     <EditText
-        android:id="@+id/editText3"
+        android:id="@+id/marriednameText"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignLeft="@+id/editText2"
-        android:layout_below="@+id/editText2"
+        android:layout_alignLeft="@+id/surnameeditText"
+        android:layout_below="@+id/surnameeditText"
         android:ems="10"
         android:hint="Married Family Name"
         android:inputType="textPersonName" >
-
         <requestFocus />
     </EditText>
 
     <CheckBox
-        android:id="@+id/checkBox2"
+        android:id="@+id/marriedBox"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignLeft="@+id/editText3"
-        android:layout_below="@+id/editText3"
+        android:layout_alignLeft="@+id/marriednameText"
+        android:layout_below="@+id/marriednameText"
         android:text="Include Married Family Name" />
 
     <CheckBox
-        android:id="@+id/checkBox1"
+        android:id="@+id/reverseBox"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignLeft="@+id/editText3"
-        android:layout_below="@+id/checkBox2"
+        android:layout_alignLeft="@+id/marriednameText"
+        android:layout_below="@+id/marriedBox"
         android:text="Reverse Name Order" />
 
     <CheckBox
-        android:id="@+id/checkBox3"
+        android:id="@+id/othertermBox"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignRight="@+id/webView1"
-        android:layout_alignTop="@+id/button1"
-        android:layout_toRightOf="@+id/button1"
+        android:layout_alignTop="@+id/searchbutton"
+        android:layout_toRightOf="@+id/searchbutton"
         android:text="Include Other Search Term" />
 
     <EditText
-        android:id="@+id/editText4"
+        android:id="@+id/othertermText"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignLeft="@+id/checkBox1"
-        android:layout_below="@+id/checkBox1"
+        android:layout_alignLeft="@+id/reverseBox"
+        android:layout_below="@+id/reverseBox"
         android:ems="10"
         android:hint="Other Search Term"
         android:inputType="textPersonName" />
 
     <Button
-        android:id="@+id/button1"
+        android:id="@+id/searchbutton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignLeft="@+id/editText4"
-        android:layout_below="@+id/editText4"
-        android:onClick="onButton1Click"
+        android:layout_alignLeft="@+id/othertermText"
+        android:layout_below="@+id/othertermText"
+        android:onClick="onSearchButtonClick"
         android:text="Search" />
 
 </RelativeLayout>

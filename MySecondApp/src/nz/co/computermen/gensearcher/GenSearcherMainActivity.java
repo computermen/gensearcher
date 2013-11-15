@@ -1,4 +1,4 @@
-package com.example.mysecondapp;
+package nz.co.computermen.gensearcher;
 
 import android.os.Bundle;
 import android.app.Activity;
@@ -8,11 +8,10 @@ import android.widget.CheckBox;
 import android.widget.TextView;
 import android.webkit.WebView;
 import android.widget.EditText;
-import nz.co.computermen.gensearcher.R;
 
-public class MainActivity extends Activity {
-// private static final String EditText = null;
-	TextView textView;
+public class GenSearcherMainActivity extends Activity {
+	// Declare the widgets
+	TextView searchstringtextView;
 	EditText firstnameeditText, surnameeditText, marriednameText, othertermText;
 	CheckBox reverseBox, marriedBox, othertermBox;
 	WebView webView;
@@ -20,16 +19,17 @@ public class MainActivity extends Activity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.activity_gensearcher_main);
         
-        reverseBox = (CheckBox) findViewById(R.id.checkBox1);
-        marriedBox = (CheckBox) findViewById(R.id.checkBox2);
-        othertermBox = (CheckBox) findViewById(R.id.checkBox3);
-        textView = (TextView) findViewById(R.id.textView2);
-        firstnameeditText = (EditText) findViewById(R.id.editText1);
-        surnameeditText = (EditText) findViewById(R.id.editText2);
-        marriednameText = (EditText) findViewById(R.id.editText3);
-        othertermText = (EditText) findViewById(R.id.editText4);
+        // Instantiate the widgets
+        reverseBox = (CheckBox) findViewById(R.id.reverseBox);
+        marriedBox = (CheckBox) findViewById(R.id.marriedBox);
+        othertermBox = (CheckBox) findViewById(R.id.othertermBox);
+        searchstringtextView = (TextView) findViewById(R.id.searchstringtextView);
+        firstnameeditText = (EditText) findViewById(R.id.firstnameeditText);
+        surnameeditText = (EditText) findViewById(R.id.surnameeditText);
+        marriednameText = (EditText) findViewById(R.id.marriednameText);
+        othertermText = (EditText) findViewById(R.id.othertermText);
         webView = (WebView) findViewById(R.id.webView1);
     }
 
@@ -41,7 +41,7 @@ public class MainActivity extends Activity {
         return true;
     }
     // Hard coded strings need fixing
-    public void onButton1Click(View view) {
+    public void onSearchButtonClick(View view) {
     	StringBuilder str = new StringBuilder("");
     	str.append("\"");
     	str.append(firstnameeditText.getText());
@@ -86,7 +86,7 @@ public class MainActivity extends Activity {
         	str.append(" ");
            	str.append(othertermText.getText());
         }
-    	textView.setText(str);
+    	searchstringtextView.setText(str);
     	webView.loadUrl ("http://www.google.com/search?q=" + str.toString());
     }
  }
